@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notice to Vacate Intake – 253 Evictions</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #162032;
+    --navy-light: #1e2f45;
+    --gold: #c9a84c;
+    --gold-light: #e8c96a;
+    --off-white: #f4f1ec;
+    --gray-soft: #8fa0b0;
+    --border: rgba(201,168,76,0.25);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--navy);
+    color: var(--off-white);
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13,27,42,0.97);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    text-decoration: none;
+  }
+
+  .logo-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: var(--gold);
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+
+  .logo-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--off-white);
+    opacity: 0.85;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--gray-soft);
+  }
+
+  .header-right a {
+    color: var(--gold-light);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray-soft);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover { color: var(--gold); }
+  .back-link svg { width: 14px; height: 14px; }
+
+  .page-header {
+    background: var(--navy-mid);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 3rem 2rem 2.5rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .page-header::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .page-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 0.3rem 0.9rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 1rem;
+  }
+
+  .page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 900;
+    margin-bottom: 0.6rem;
+  }
+
+  .page-sub {
+    font-size: 0.9rem;
+    color: var(--gray-soft);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  .form-section {
+    padding: 3rem 1.5rem 5rem;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .info-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .info-item {
+    background: var(--navy-light);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-left: 2px solid var(--gold);
+    padding: 1rem 1.2rem;
+  }
+
+  .info-item-label {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+
+  .info-item-val {
+    font-size: 0.85rem;
+    color: var(--off-white);
+    font-weight: 500;
+  }
+
+  .form-wrapper {
+    background: #fff;
+    border-top: 3px solid var(--gold);
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  }
+
+  .form-wrapper iframe {
+    width: 100%;
+    border: none;
+    display: block;
+    min-height: 2200px;
+  }
+
+  footer {
+    background: rgba(0,0,0,0.3);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+
+  .footer-info {
+    font-size: 0.78rem;
+    color: var(--gray-soft);
+    line-height: 2;
+  }
+
+  .footer-info a { color: var(--gray-soft); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    .info-strip { grid-template-columns: 1fr; }
+    .header-right span { display: none; }
+    .form-wrapper iframe { min-height: 2800px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <span class="logo-num">253</span>
+    <span class="logo-text">Evictions</span>
+  </a>
+  <div class="header-right">
+    <span>Tacoma · Pierce &amp; Thurston County</span>
+    <a href="tel:+12537596853">(253) 759-6853</a>
+  </div>
+</header>
+
+<div class="page-header">
+  <a href="index.html" class="back-link" style="position:absolute;left:2rem;top:50%;transform:translateY(-50%);">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back
+  </a>
+  <div class="page-badge">📋 &nbsp;Notice to Vacate</div>
+  <h1 class="page-title">Notice Intake Form</h1>
+  <p class="page-sub">Fill out the form below. Our team receives your submission instantly and will prepare and serve the correct legal notice on your behalf.</p>
+</div>
+
+<div class="form-section">
+  <div class="info-strip">
+    <div class="info-item">
+      <span class="info-item-label">Use This When</span>
+      <span class="info-item-val">First step before a lawsuit</span>
+    </div>
+    <div class="info-item">
+      <span class="info-item-label">Response Time</span>
+      <span class="info-item-val">Within 24 business hours</span>
+    </div>
+    <div class="info-item">
+      <span class="info-item-label">Questions?</span>
+      <span class="info-item-val">(253) 759-6853</span>
+    </div>
+  </div>
+
+  <div class="form-wrapper">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdQkwaOB7S2qpIBimQJ_rXpnndAiOR33Zndo7q-sl_WLBmftQ/viewform?embedded=true"
+      title="Notice to Vacate Intake Form"
+      loading="lazy"
+    >
+      Loading form…
+    </iframe>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-info">
+    Tacoma · Pierce &amp; Thurston County, Washington<br>
+    <a href="tel:+12537596853">(253) 759-6853</a> &nbsp;·&nbsp; lhetter&#64;aol&#46;com<br>
+    <span style="opacity:0.45;font-size:0.7rem;">© 2025 253 Evictions. Licensed to practice law in the State of Washington.</span>
+  </div>
+</footer>
+
+</body>
+</html>
